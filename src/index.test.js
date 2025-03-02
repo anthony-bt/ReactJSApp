@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import App from "./App";
 
 // Mock the CSS imports
@@ -39,7 +39,6 @@ afterEach(() => {
 });
 
 test('renders App component', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/some text inside App/i);
-  expect(linkElement).toBeInTheDocument();
+  const { getByText } = render(<App />);
+  expect(getByText(/My React App/i)).toBeInTheDocument();
 });
