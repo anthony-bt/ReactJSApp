@@ -1,0 +1,8 @@
+# project
+node_modules
+
+# tests
+coverage
+
+# api keys
+.env
