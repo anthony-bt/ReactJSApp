@@ -5,6 +5,7 @@ build
 
 # tests
 coverage
+test-results
 
 # api keys
 .env
