@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect }  from 'react';
 import Chart from './chart';
 
 export default function Dashboard() {
+
+  useEffect(() => {
+    document.title = 'My Test - Dashboard';
+  }, []);
+
   return (
     <div>
       <h3 style={{ margin: '15px 0 0 30px' }}>My Dashboard</h3>

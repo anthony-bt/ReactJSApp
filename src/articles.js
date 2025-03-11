@@ -6,6 +6,8 @@ export default function Articles() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    document.title = 'My Test - Articles';
+
     fetch(`https://newsapi.org/v2/everything?q=apple&from=2025-02-23&to=2025-02-23&sortBy=popularity&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`)
       .then(response => response.json())
       .then(json => {
