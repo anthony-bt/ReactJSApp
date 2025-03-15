@@ -19,31 +19,30 @@ export default function Articles() {
 
   if (isLoading) {
     return (
-      <Spinner style={style.spinner} animation="border" role="status">
+      <Spinner animation="border" role="status">
         <span className="visually-hidden">Loading...</span>
       </Spinner>
     );
   } else {
     return (
-      <div>
+      <div class="lg:columns-3 md:columns-2 sm:columns-1 m-5 gap-5">
         {data?.articles.map((a, index) => (
           <div
-            style={style.div}
+            class="rounded-xl shadow-xl border-1 border-sky-500 break-inside-avoid-column mb-5"
             key={index}
           >
             <a
-              style={style.article}
+              class="flex flex-row items-center gap-10 p-5"
               href={a.url}
             >
               <img
-                style={style.avatar}
-                className="avatar"
+                class="size-24 rounded-full"
                 src={a.urlToImage}
                 alt={'Photo of ' + a.description}
               />
               <div>
-                <h1>{a.title}</h1>
-                <p>{a.description}</p>
+                <h1 class="text-xl font-bold mb-2">{a.title}</h1>
+                <p class="text-base">{a.description}</p>
               </div>
             </a>
           </div>
@@ -51,33 +50,4 @@ export default function Articles() {
       </div>
     );
   }
-}
-
-const style = {
-  div: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'left',
-    justifyContent: 'center',
-    padding: '20px',
-    border: '1px solid #ccc',
-  },
-  spinner: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: 'auto',
-  },
-  article: {
-    display: 'flex',
-    flexDirection: 'row',
-    gap: 10,
-    alignItems: 'center',
-  },
-  avatar: {
-    borderRadius: '50%',
-    width: '100px',
-    height: '100px',
-  },
 }
