@@ -1,6 +1,7 @@
 # project
 node_modules
 build
+dist
 .DS_Store
 
 # tests
