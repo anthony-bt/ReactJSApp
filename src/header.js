@@ -1,8 +1,8 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import logo from './assets/logo-app.svg';
+import logo from './assets/logo-app.png';
 
 const navigation = [
   { name: 'Home', href: '/', current: true },

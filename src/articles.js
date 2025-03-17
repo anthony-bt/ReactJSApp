@@ -25,24 +25,24 @@ export default function Articles() {
     );
   } else {
     return (
-      <div class="lg:columns-3 md:columns-2 sm:columns-1 m-5 gap-5">
+      <div className="lg:columns-3 md:columns-2 sm:columns-1 m-5 gap-5">
         {data?.articles.map((a, index) => (
           <div
-            class="rounded-xl shadow-xl border-1 border-sky-500 break-inside-avoid-column mb-5"
+            className="rounded-xl shadow-xl border-1 border-sky-500 break-inside-avoid-column mb-5"
             key={index}
           >
             <a
-              class="flex flex-row items-center gap-10 p-5"
+              className="flex flex-row items-center gap-10 p-5"
               href={a.url}
             >
               <img
-                class="size-24 rounded-full"
+                className="size-24 rounded-full"
                 src={a.urlToImage}
                 alt={'Photo of ' + a.description}
               />
               <div>
-                <h1 class="text-xl font-bold mb-2">{a.title}</h1>
-                <p class="text-base">{a.description}</p>
+                <h1 className="text-xl font-bold mb-2">{a.title}</h1>
+                <p className="text-base">{a.description}</p>
               </div>
             </a>
           </div>
