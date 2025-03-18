@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Spinner from 'react-bootstrap/Spinner';
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function Articles() {
   const [data, setData] = useState(null);
@@ -19,9 +19,9 @@ export default function Articles() {
 
   if (isLoading) {
     return (
-      <Spinner animation="border" role="status">
-        <span className="visually-hidden">Loading...</span>
-      </Spinner>
+      <div className="flex justify-center mt-5">
+        <CircularProgress size="30px" color="secondary" />
+      </div>
     );
   } else {
     return (

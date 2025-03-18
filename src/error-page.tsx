@@ -2,11 +2,11 @@ import React from "react";
 import { useNavigate, useOutletContext } from 'react-router';
 
 export default function ErrorPage() {
-  const [selectedMenu, setSelectedMenu] = useOutletContext() || [];
+  const [selectedMenu, setSelectedMenu] = useOutletContext<any>();
   const navigate = useNavigate();
 
   return (
-    <div style={style.container}>
+    <div style={containerStyle}>
       <div className="text-center">
         <p className="text-base font-semibold text-sky-600">404</p>
         <h1 className="mt-4 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">Page not found</h1>
@@ -36,12 +36,10 @@ export default function ErrorPage() {
   );
 }
 
-const style = {
-  container: {
-    height: 'calc(100vh - 56px)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
+const containerStyle: React.CSSProperties = {
+  height: 'calc(100vh - 56px)',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
 };

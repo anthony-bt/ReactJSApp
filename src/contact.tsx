@@ -7,7 +7,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <div style={style.container}>
+    <div style={containerStyle}>
       <div className="mx-auto max-w-2xl text-center mt-5">
         <h2 className="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Contact Us!</h2>
         <p className="mt-2 text-lg/8 text-gray-600">Have a question or need assistance? We’re here to help!</p>
@@ -15,30 +15,30 @@ export default function Contact() {
       <form action="#" method="POST" className="mx-auto max-w-xl sm:mt-10">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label for="first-name" className="block text-sm/6 font-semibold text-gray-900">First name</label>
+            <label htmlFor="first-name" className="block text-sm/6 font-semibold text-gray-900">First name</label>
             <div className="mt-2.5">
-              <input type="text" name="first-name" id="first-name" autocomplete="given-name" className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600" />
+              <input type="text" name="first-name" id="first-name" autoComplete="given-name" className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600" />
             </div>
           </div>
 
           <div>
-            <label for="last-name" className="block text-sm/6 font-semibold text-gray-900">Last name</label>
+            <label htmlFor="last-name" className="block text-sm/6 font-semibold text-gray-900">Last name</label>
             <div className="mt-2.5">
-              <input type="text" name="last-name" id="last-name" autocomplete="family-name" className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600" />
+              <input type="text" name="last-name" id="last-name" autoComplete="family-name" className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600" />
             </div>
           </div>
 
           <div className="sm:col-span-2">
-            <label for="email" className="block text-sm/6 font-semibold text-gray-900">Email</label>
+            <label htmlFor="email" className="block text-sm/6 font-semibold text-gray-900">Email</label>
             <div className="mt-2.5">
-              <input type="email" name="email" id="email" autocomplete="email" className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600" />
+              <input type="email" name="email" id="email" autoComplete="email" className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600" />
             </div>
           </div>
 
           <div className="sm:col-span-2">
-            <label for="message" className="block text-sm/6 font-semibold text-gray-900">Message</label>
+            <label htmlFor="message" className="block text-sm/6 font-semibold text-gray-900">Message</label>
             <div className="mt-2.5">
-              <textarea name="message" id="message" rows="4" className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600"></textarea>
+              <textarea name="message" id="message" rows={4} className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-sky-600"></textarea>
             </div>
           </div>
 
@@ -63,9 +63,7 @@ export default function Contact() {
   );
 }
   
-const style = {
-  container: {
-    height: 'calc(100vh - 56px)',
-    padding: '0 10px'
-  }
+const containerStyle: React.CSSProperties = {
+  height: 'calc(100vh - 56px)',
+  padding: '0 10px'
 };
