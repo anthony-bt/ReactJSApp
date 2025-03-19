@@ -20,7 +20,7 @@ export default function Articles() {
   if (isLoading) {
     return (
       <div className="flex justify-center mt-5">
-        <CircularProgress size="30px" color="secondary" />
+        <CircularProgress size="30px" color="primary" />
       </div>
     );
   } else {
