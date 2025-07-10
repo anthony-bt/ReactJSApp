@@ -8,7 +8,7 @@ export default function Articles() {
   useEffect(() => {
     document.title = 'My Test - Articles';
 
-    fetch(`https://newsapi.org/v2/everything?q=apple&from=2025-02-23&to=2025-02-23&sortBy=popularity&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`)
+    fetch(`https://newsapi.org/v2/everything?q=apple&from=2025-07-06&to=2025-07-06&sortBy=popularity&apiKey=dcd28e9ccba4430996d1818e88df2c4a`)
       .then(response => response.json())
       .then(json => {
         setData(json);
