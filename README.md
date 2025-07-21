@@ -1,4 +1,4 @@
-# Tic tac toe
+# ReactJS Project for fun
 Main front-end repository - React 19
 
 # Installation
